@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+body {
+  background-color: #747474;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #3d3f43;
+
+  .logo {
+    width: 170px;
+    cursor: pointer;
+    background: transparent;
+  }
+  .nav-search {
+    position: relative;
+    padding: 5px 5px;
+    width: 500px;
+    border-radius: 10px;
+    &__icon {
+      position: absolute;
+      top: 4px;
+      left: 2px;
+      width: 53px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+    input {
+      height: 50px;
+      width: 100%;
+      padding-left: 50px;
+      border: none;
+      background: #303236;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 15px;
+      &::placeholder {
+        color: rgba(#fff, 0.9);
+      }
+    }
+  }
+  .icon {
+    width: 40px;
+    background: transparent;
+  }
+}
+@media screen and (max-width: 992px) {
+  header {
+    justify-content: space-around;
+    .logo {
+      width: 100px;
+    }
+    .nav-search {
+      width: 200px;
+      &__icon {
+        width: 20px;
+        height: 20px;
+        top: 19px;
+        left: 20px;
+      }
+    }
+    .icon {
+      width: 20px;
+      background: transparent;
+    }
+  }
+}
